@@ -407,7 +407,7 @@ header {
     background-color: #a7978d;
     color: white;
     position: relative;
-    z-index: 4;
+    z-index: 10;
 }
 #staff-content {
     width: 75%;
@@ -468,7 +468,7 @@ footer {
     color: white;
     padding: 50px 0;
     position: relative;
-    z-index: 5;
+    z-index: 13;
     font-size: 20px;
     display: flex;
     justify-content: center;
