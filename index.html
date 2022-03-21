@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Patio Comercial El Mana</title>
+        <meta charset="UTF-8">
+        <script>
+
+            let midscreen = window.innerWidth / 2
+            let select = (name) => document.querySelector(name)
+            let bound = (x) => x.getBoundingClientRect().y
+            let frames = 
+            ["#frame_1","#frame_2","#frame_3","#frame_4","#frame_5","#frame_6","#frame_7","#frame_8","#frame_9","#frame_10",
+            "#frame_11","#frame_12","#frame_13","#frame_14","#frame_15","#frame_16","#frame_17","#frame_18","#frame_19",
+            "#frame_20", "#frame_21"]
+
+            function getScroll() {
+                let facade = select("#facade")
+                let pos = bound(facade)
+                let minilogo = select(".mini-icon")
+
+                if (pos === 0) {
+                    facade.style.backgroundColor = "beige"
+                    minilogo.style.visibility = "visible"
+                } else if (pos > 0) {
+                    facade.style.backgroundColor = "transparent"
+                    minilogo.style.visibility = "hidden"
+                }
+                
+                for (i=0; i < frames.length; i++) {
+                    let name = frames[i]
+                    let target = select(name)
+                    let location = bound(target)
+                    if (location > 0) {
+                        target.style.visibility = "hidden"
+                    } else if (location === 0) {
+                        target.style.visibility = "visible"
+                    }
+                }
+
+
+            }
+
+            document.addEventListener("scroll", getScroll)
+
+        </script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="breakpoints.css">
+        <link rel="stylesheet" type="text/css" href="jossy_banner_about.css">
+        <link rel="icon" style="width: 10px; height: 10px;"href="LOGO.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <nav class="section-flex">
+            <div id="nav-top"></div>
+            
+            <div class="nav">
+
+                <div class="nav-wrapper">
+                    <div class="brand">
+                        <span>Patio Comercial</span>
+                        <div class="mini-icon">
+                            <img src="mini-circle.svg" alt="mini circle">
+                            <img src="LOGO.svg" alt="green leafs" id="mini-logo" style="width: 35px; height: 35px;">
+                        </div>
+                    </div>
+                    
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Categorías</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+
+        <header class="section-flex">
+            <div class="header content-flex big-container">
+                <div class="logo">
+                    <img src="circle.svg" alt="black circle">
+                    <p>EL <br> MANA</p>
+                    <img src="LOGO.svg" alt="green leafs" id="leafs">
+                </div>
+                <div class="intro">
+                    <h4>Hola!</h4>
+                    <h2>Explora nuestro catálogo de <u>productos americanos</u>, <u>ropa americana</u> y disfruta de nuestro menú con el mejor <u>sazón potosino</u>...</h2>
+                </div>
+            </div>
+        </header>
+
+        <div class="layer" id="header-change"></div>
+
+        <section class="layer section-flex consecutive-frame">
+            <div class="big-container facade" id="facade">
+                <img src="TOP FACADE.svg" />
+                <img src="LOWER FACADE.svg" />
+            </div>
+        </section>
+<!-- APPEARANCE OF FIRST FLOOR -->
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_1">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_2">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_3">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_4">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_5">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_6">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_7">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_8">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_9">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor">
+            <div class="floor-sized-container" id="frame_10">
+                <img class="content-on-floor" src="EMPTY FLOOR.svg" />
+            </div>
+        </section>
+<!-- END APPEARANCE OF FIRST FLOOR -->
+
+
+
+
+<!-- CONTENT IN HOUSE -->
+        <section class="layer section-flex consecutive-frame">
+            <div class="floor-sized-container" id="frame_11">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="clothes.png" alt="Single cloth credit to 'Girl with Red Hat', Clothes and hat display credit to 'Amanda Vick', both from Unsplash">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Ropa Americana</h3><br>
+                            <p>Descubre diferentes estilos y marcas americanas que no encontrarás dentro de México y además... con precios especiales</p><br>
+                            <p>Nueva mercancía cada semana!</p>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catálogo</button>
+                            <button class="red">Promociones</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer section-flex consecutive-frame">
+            <div class="floor-sized-container" id="frame_12">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="clothes.png" alt="Single cloth credit to 'Girl with Red Hat', Clothes and hat display credit to 'Amanda Vick', both from Unsplash">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Ropa Americana</h3><br>
+                            <p>Descubre diferentes estilos y marcas americanas que no encontrarás dentro de México y además... con precios especiales</p><br>
+                            <p>Nueva mercancía cada semana!</p>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catálogo</button>
+                            <button class="red">Promociones</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer section-flex non-consecutive">
+            <div class="floor-sized-container" id="frame_13">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="clothes.png" alt="Single cloth credit to 'Girl with Red Hat', Clothes and hat display credit to 'Amanda Vick', both from Unsplash">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Ropa Americana</h3><br>
+                            <p>Descubre diferentes estilos y marcas americanas que no encontrarás dentro de México y además... con precios especiales</p><br>
+                            <p>Nueva mercancía cada semana!</p>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catálogo</button>
+                            <button class="red">Promociones</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="layer section-flex non-consecutive">
+            <div class="big-container facade" id="frame_20">
+                <img src="EMPTY FLOOR.svg" />
+                <img src="LOWER FACADE.svg" />
+            </div>
+        </section>
+
+
+
+
+
+        <section class="layer section-flex consecutive-frame">
+            <div class="floor-sized-container" id="frame_14">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="americanproducts.png" alt="various american products">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Productos Americanos</h3><br>
+                            <p>Desde golosinas, papas, complementos y postres de sabores exclusivos hasta productos de cuidado para la piel con alta tecnología hechas por empresas estadounidenses</p><br>
+                            <p>Conoce nuevas marcas o sabores que no conocías!</p>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catálogo</button>
+                            <button class="red">Promociones</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer section-flex consecutive-frame">
+            <div class="floor-sized-container" id="frame_15">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="americanproducts.png" alt="various american products">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Productos Americanos</h3><br>
+                            <p>Desde golosinas, papas, complementos y postres de sabores exclusivos hasta productos de cuidado para la piel con alta tecnología hechas por empresas estadounidenses</p><br>
+                            <p>Conoce nuevas marcas o sabores que no conocías!</p>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catálogo</button>
+                            <button class="red">Promociones</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer section-flex non-consecutive">
+            <div class="floor-sized-container" id="frame_16">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="americanproducts.png" alt="various american products">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Productos Americanos</h3><br>
+                            <p>Desde golosinas, papas, complementos y postres de sabores exclusivos hasta productos de cuidado para la piel con alta tecnología hechas por empresas estadounidenses</p><br>
+                            <p>Conoce nuevas marcas o sabores que no conocías!</p>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catálogo</button>
+                            <button class="red">Promociones</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="layer section-flex non-consecutive">
+            <div class="big-container facade" id="frame_21">
+                <img src="EMPTY FLOOR.svg" />
+                <img src="LOWER FACADE.svg" />
+            </div>
+        </section>
+
+
+
+
+        <section class="layer section-flex consecutive-frame">
+            <div class="floor-sized-container" id="frame_17">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="food.png" alt="various food plates">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Restaurante</h3><br>
+                            <p>Platillos hechos con ingredientes cuidadosamente seleccionados y elaborados con un sazón especialmente potosino</p><br>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="red">La Carta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer section-flex consecutive-frame">
+            <div class="floor-sized-container" id="frame_18">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="food.png" alt="various food plates">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Restaurante</h3><br>
+                            <p>Platillos hechos con ingredientes cuidadosamente seleccionados y elaborados con un sazón especialmente potosino</p><br>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="red">La Carta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer section-flex">
+            <div class="floor-sized-container" id="frame_19">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">
+                            <img src="food.png" alt="various food plates">
+                        </div>
+                        <div class="floor-grid-txt">
+                            <h3>Restaurante</h3><br>
+                            <p>Platillos hechos con ingredientes cuidadosamente seleccionados y elaborados con un sazón especialmente potosino</p><br>
+                        </div>
+                        <div class="floor-grid-btn">
+                            <button class="red">La Carta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- END OF CONTENT IN HOUSE -->
+        <section class="layer">
+            <div class="divider"></div>
+        </section>
+<!-- EL MANA MOVIL -->
+        <section class="layer section-flex" id="mana-movil-section">
+            <div class="content-flex big-container mana-movil">
+                <div id="movil-container">
+                    <div id="movil">
+                        <img src="food truck.png" alt="food truck icon">
+                    </div>
+                </div>
+                    <h1>SÓLO LOS FINES!</h1>
+                    <p>Vísitanos al Mana Móvil y elige Carne Asada y demás platillos para disfrutar al aire libre</p>
+                    <br>
+                    <h3>Sábados</h3>
+                    <p>De 11:00 hrs. a 17:00 hrs.</p>
+                    
+                    <h3>Domingos</h3>
+                    <p>De 12:00 hrs: a 16:00 hrs.</p>
+            </div>
+        </section>
+
+<!-- END OF MANA MOVIL -->
+
+
+<!-- STAFF -->
+        <section class="section-flex" id="staff-section">
+            <div id="staff-content">
+                <h2>Staff featuring...</h2>
+                <div id="image-stars">
+                    <img src="stars.svg" alt="five gold stars">
+                </div>
+                <div class="container">
+
+                    <div class="staff-card">
+                        <div class="staff-img">
+                            <img src="karina.jpg" alt="picture of owner">
+                        </div>
+                        <ul>
+                            <li>Le gusta viajar</li>
+                            <li>Inovadora</li>
+                            <li>Dedicada</li>
+                        </ul>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img">
+                            <img src="unknown-person-icon-27.jpg" alt="unknow person icon">
+                        </div>
+                        <span>Description about the staff, their likes and dislikes and weird facts about them.</span>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img">
+                            <img src="unknown-person-icon-27.jpg" alt="unknow person icon">
+                        </div>
+                        <span>Description about the staff, their likes and dislikes and weird facts about them.</span>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img">
+                            <img src="me.jpg" alt="picture of web dev">
+                        </div>
+                        <ul>
+                            <li>Le gusta crear</li>
+                            <li>Es zurdo</li>
+                            <li>Adicto a Dead by Daylight</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- END STAFF -->
+
+        <footer>
+            <div class="footer-grid">
+                <div id="social-media">
+                    <a href="https://www.facebook.com/elmanaslp" target="_blank"><img src="facebook-icon-18-256.png" alt="facebook icon"></a>
+                    <a href="https://www.instagram.com/elmanaslp/" target="_blank"><img src="new-instagram-logo-white-border-icon-png-large.png" alt="instagram icon"></a>
+                </div>
+                <div id="footer-products">
+                    <h4>Nuestro catálogo</h4>
+                    <ul>
+                        <li>Ropa Americana</li>
+                        <li>Dulcería</li>
+                        <li>Complementos</li>
+                        <li>Cuidado de la piel</li>
+                        <li>Otros...</li>
+                    </ul>
+                </div>
+                <div id="footer-company">
+                    <h4>Nosotros</h4>
+                    <ul>
+                        <li>Nuestra historia</li>
+                        <li>Nuestra visión</li>
+                        <li>Nuestros estándares</li>
+                        <li>Descuentos y Promociones</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div id="footer-legal">
+                    <h4>Aún más...</h4>
+                    <ul>
+                        <li>Contáctanos</li>
+                        <li>Accesibilidad</li>
+                        <li>Términos de Privacidad</li>
+                        <li>Términos y Condiciones</li>
+                        <li>Garantías y Devoluciones</li>
+                    </ul>
+                </div>
+                <div id="footer-whatsapp">
+                    <h5>Únete a nuestro grupo de Whatsapp!</h5>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="">
+                </div>
+                <div id="footer-rights">
+                    <p>Patio Comercial El Mana @ 2022 All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div id="jossy_banner_about">
+            @ Jossy Solá
+
+            <a href="guidestyle.html" target="_blank">About this page</a>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,325 @@
+@media only screen and (min-width: 1511px) {
+    .header {
+        top: 100px;
+    }
+}
+@media only screen and (max-width: 1510px) {
+
+    html {
+        font-size: 25px;
+    }
+    .header {
+        top: 95px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .brand {
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    .floor-grid-txt {
+        padding-bottom: 0;
+    }
+    button {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 1175px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .floor-grid-txt {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .brand {
+        width: 800px;
+        height: 45px !important;
+        position: relative;
+        top: -10px;
+    }
+    .brand span {
+        font-size: 25px;
+        top: -10px;
+    }
+    .mini-icon {
+        top: -3px;
+    }
+    .nav ul {
+        width: 100%;
+        height: 100%;
+        word-spacing: 0.5mm;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .nav ul {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1135px) {
+    h3 {
+        font-size: 2rem;
+    }
+    nav {
+        height: 140px !important;
+    }
+    .nav {
+        
+        height: 90px;
+        padding: 0px;
+        /* Display */
+        display: flex;
+        justify-content: center;
+        /* Resize Property */
+        width: 75%;
+        /* Behavior */
+    }
+    .nav-wrapper {
+        height: 100%;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        flex-flow: column wrap;
+    }
+    .brand {
+        width: fit-content;
+        height: 50px !important;
+        display: inline-flex;
+    }
+    .nav ul {
+        width: 100%;
+        height: fit-content;
+        word-spacing: 3mm;
+        text-align: center;
+    }
+
+    header {
+        margin-top: -140px;
+    }
+    .header {
+        top: 140px;
+        height: 650px;
+    }
+    .floor-grid-btn {
+        align-items: flex-end;
+    }
+    button {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    h4 {
+        font-size: 1.5rem;
+    }
+    .section-flex {
+        height: 1000px;
+    }
+    .floor-sized-container {
+        height: 1000px !important;
+    }
+    .flex-on-floor {
+        height: fit-content;
+        background-image: none;
+        top: 153px;
+    }
+
+    .floor-grid {
+        /* Location */
+        display: grid;
+        width: 89%;
+        height: fit-content;
+        grid-template: 1fr 0.5fr 1fr / 1fr;
+        grid-template-areas: 
+            "img"
+            "txt"
+            "btn";
+        background-color: transparent;
+    }
+    .floor-grid-img {
+        grid-area: img;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .floor-grid-img img {
+        width: 50%;
+        height: auto;
+    }
+    .floor-grid-txt {
+        grid-area: txt;
+        height: fit-content;
+        text-align: center;
+        padding-bottom: 10px;
+        background-color: #483737;
+        border-top: 1px solid #ffffff36;
+        border-left: 1px solid #ffffff36;
+    }
+
+    .floor-grid-btn {
+        grid-area: btn;
+        align-items: flex-start;
+        height: fit-content;
+        background-color: #483737;
+        border-top: 1px solid #ffffff36;
+        border-left: 1px solid #ffffff36;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .header {
+        height: 650px;
+    }
+    #header-change {
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: 815px) {
+    h2 {
+        font-size: 2rem;
+    }
+    
+}
+
+@media only screen and (max-width: 813px) {
+    .logo {
+        /* Appearance */
+        width: 200px;
+        height: 200px;
+    }
+    .logo p {
+        position: relative;
+        top: -105%;
+        font-family: "Bahianita";
+        font-size: 80px;
+        letter-spacing: 1mm;
+    }
+    #leafs {
+        position: relative;
+        top: -165%;
+    }
+    .floor-grid-txt {
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .nav {
+        width: 90%;
+    }
+    .big-container {
+        width: 90%;
+    }
+    .floor-sized-container {
+        width: 90%;
+    }
+    h5 {
+        font-size: 1.3rem;
+    }
+
+}
+
+@media only screen and (max-width: 637px) {
+    .footer-grid {
+        width: 90%;
+        height: fit-content;
+        display: grid;
+        grid-template: 1.5rem repeat(4, 1fr) 1.5rem / 1fr;
+        grid-template-areas: 
+        "social"
+        "products"
+        "company"
+        "legal"
+        "whatsapp"
+        "rights";
+    }
+    .footer-grid h4 {
+        color: beige;
+        font-size: 2rem;
+    }
+    #social-media {
+        grid-area: social;
+        text-align: center;
+        height: 1.5rem;
+    }
+    #footer-products {
+        grid-area: products;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    #footer-company {
+        grid-area: company;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    #footer-legal {
+        grid-area: legal;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    #footer-whatsapp {
+        grid-area: whatsapp;
+        padding-bottom: 25px;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    #footer-whatsapp h5 {
+        font-size: 2rem;
+    }
+    .flex-on-floor {
+        background-color: beige;
+        top: 140px;
+    }
+    .floor-grid-img {
+        background-image: url(./EMPTY\ FLOOR.svg);
+        background-size: contain;
+    }
+    #frame_20 {
+        display: none;
+    }
+    #frame_21 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .nav {
+        width: 100%;
+    }
+    .big-container {
+        width: 100%;
+    }
+    .floor-sized-container {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 470px) {
+    html {
+        font-size: 16px;
+    }
+    .mana-movil {
+        align-content: center;
+        align-items: center;
+    }
+    .mana-movil p {
+        text-align: center;
+    }
+}

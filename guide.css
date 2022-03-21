@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header {
+    margin-top: 50px;
+}
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: Courier, Arial, Helvetica, sans-serif
+}
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #000000a6;
+}
+p, li, a {
+    font-size: 1em;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-style: none;
+}
+a:hover {
+    cursor: pointer;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+section {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+.content {
+    max-width: 70%;
+    height: fit-content;
+    border: 2px solid #b8b8b8;
+    padding: 50px 50px;
+    text-align: left;
+}
+.content .about {
+    min-width: 400px;
+}
+.content .color {
+    width: 100px;
+    height: 100px;
+    box-sizing: content-box;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+.content .color p {
+    margin-top: 25%;
+}
+#typo {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: wrap column;
+}
+#fonts {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#fonts .content {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.bahia {
+    font-family: 'Bahianita', cursive;
+    font-weight: 400;
+    font-size: 64px;
+}
+.amatic {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 64px;
+}
+.hubballi {
+    font-family: 'Hubballi', cursive;
+    font-weight: 400;
+    font-size: 30px;
+}

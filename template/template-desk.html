@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Template Prototype</title>
+        <meta charset="UTF-8">
+        <script>
+
+            let midscreen = window.innerWidth / 2
+            let select = (name) => document.querySelector(name)
+            let bound = (x) => x.getBoundingClientRect().y
+            let frames = 
+            ["#frame_1","#frame_2","#frame_3","#frame_4","#frame_5","#frame_6","#frame_7","#frame_8","#frame_9","#frame_10",
+            "#frame_11","#frame_12","#frame_13","#frame_14","#frame_15","#frame_16","#frame_17","#frame_18","#frame_19","#frame_20"]
+
+            function getScroll() {
+                let facade = select("#facade")
+                let pos = bound(facade)
+
+                if (pos === 0) {
+                    facade.style.backgroundColor = "beige"
+                } else if (pos > 0) {
+                    facade.style.backgroundColor = "transparent"
+                }
+                
+                for (i=0; i < frames.length; i++) {
+                    let name = frames[i]
+                    let target = select(name)
+                    let location = bound(target)
+                    if (location > 0) {
+                        target.style.visibility = "hidden"
+                    } else if (location === 0) {
+                        target.style.visibility = "visible"
+                    }
+                }
+
+
+            }
+
+            document.addEventListener("scroll", getScroll)
+
+        </script>
+        <link rel="stylesheet" type="text/css" href="./template-desk.css">
+    </head>
+
+    <body>
+        
+        <nav class="section-flex">
+            <div id="nav-top"></div>
+            <div class="nav">Nav bar</div>
+        </nav>
+
+        <header class="section-flex">
+            <div class="header content-flex big-container">
+                <div class="logo">Logo</div>
+                <div class="intro">A mission statement or brief description of the company.</div>
+            </div>
+        </header>
+
+        <section class="layer section-flex consecutive-frame">
+            <div class="big-container facade" id="facade">
+                <img src="./TOP FACADE.svg" />
+                <img src="./LOWER FACADE.svg" />
+            </div>
+        </section>
+<!-- APPEARANCE OF FIRST FLOOR -->
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_1">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_2">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_3">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_4">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_5">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_6">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_7">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_8">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor consecutive-frame">
+            <div class="floor-sized-container" id="frame_9">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+        <section class="layer section-flex top-floor">
+            <div class="floor-sized-container" id="frame_10">
+                <img class="content-on-floor" src="./EMPTY FLOOR.svg" />
+            </div>
+        </section>
+<!-- END APPEARANCE OF FIRST FLOOR -->
+
+
+
+
+<!-- CONTENT IN HOUSE -->
+        <section class="layer section-flex consecutive-frame">
+            <div class="floor-sized-container" id="frame_11">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">Image</div>
+                        <div class="floor-grid-txt">Description</div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catalog</button>
+                            <button class="promos">Discounts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer section-flex consecutive-frame">
+            <div class="floor-sized-container" id="frame_12">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">Image</div>
+                        <div class="floor-grid-txt">Description</div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catalog</button>
+                            <button class="promos">Discounts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="layer section-flex">
+            <div class="floor-sized-container" id="frame_13">
+                <div class="flex-on-floor">
+                    <div class=" floor-grid">
+                        <div class="floor-grid-img">Image</div>
+                        <div class="floor-grid-txt">Description</div>
+                        <div class="floor-grid-btn">
+                            <button class="catalog">Catalog</button>
+                            <button class="promos">Discounts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- END OF CONTENT IN HOUSE -->
+        <section class="layer">
+            <div class="divider"></div>
+        </section>
+<!-- EL MANA MOVIL -->
+        <section class="layer section-flex" id="mana-movil-section">
+            <div class="content-flex big-container mana-movil">
+                <div id="movil-container">
+                    <div id="movil"></div>
+                </div>
+                <div>Text about Mana Movil</div>
+            </div>
+        </section>
+
+<!-- END OF MANA MOVIL -->
+
+<!-- STAFF -->
+        <section class="section-flex" id="staff-section">
+            <div id="staff-content">
+                <p>Staff featuring...</p>
+                <div id="image-stars">image five stars</div>
+                <div class="container">
+
+                    <div class="staff-card">
+                        <div class="staff-img">Img</div>
+                        <span>Description about the staff, their likes and dislikes and weird facts about them.</span>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img">Img</div>
+                        <span>Description about the staff, their likes and dislikes and weird facts about them.</span>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img">Img</div>
+                        <span>Description about the staff, their likes and dislikes and weird facts about them.</span>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img">Img</div>
+                        <span>Description about the staff, their likes and dislikes and weird facts about them.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- END STAFF -->
+
+        <footer>
+            <div class="footer-grid">
+                <div id="social-media">
+                    <span>Facebook icon</span>
+                    <span>Instagram icon</span>
+                </div>
+                <div id="footer-products">
+                    <h4>Our products</h4>
+                    <ul>
+                        <li>product 1</li>
+                        <li>product 2</li>
+                        <li>product 3</li>
+                        <li>product 4</li>
+                        <li>product 5</li>
+                    </ul>
+                </div>
+                <div id="footer-company">
+                    <h4>Our company</h4>
+                    <ul>
+                        <li>Our story</li>
+                        <li>Our vision</li>
+                        <li>Our standards</li>
+                        <li>Discounts dynamic</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div id="footer-legal">
+                    <h4>Even more...</h4>
+                    <ul>
+                        <li>Contact us</li>
+                        <li>Accessibility</li>
+                        <li>Privacy</li>
+                        <li>Terms and Conditions</li>
+                        <li>Guarantee</li>
+                    </ul>
+                </div>
+                <div id="footer-whatsapp">
+                    <h4>Join our whatsapp group!</h4>
+                    <div>QR Code</div>
+                </div>
+                <div id="footer-rights">
+                    <p>El Mana @ 2022 All rights reserved. </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
